@@ -1,8 +1,6 @@
 <li [ngClass]="{'list-group-item': true,
                 'list-group-item-success': appareilStatus === 'allumé',
                 'list-group-item-danger': appareilStatus === 'éteint'}" >
-  <div class="vert" *ngIf="appareilStatus === 'allumé'"></div>
-  <div class="rouge" *ngIf="appareilStatus === 'éteint'"></div>
 
   <h4 [ngStyle]="{color: getColor()}" >{{appareilName}} - {{appareilStatus}}</h4>
   <input type="text" [(ngModel)]="appareilName">
